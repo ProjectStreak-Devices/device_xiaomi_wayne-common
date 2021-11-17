@@ -15,6 +15,14 @@ ENABLE_APEX := false
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
+# Camera
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml
+
+PRODUCT_PACKAGES += \
+    camera.sdm660 \
+    libmm-qcamera
+
 # Consumerir
 BOARD_HAVE_IR := true
 
